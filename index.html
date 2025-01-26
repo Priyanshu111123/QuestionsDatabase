@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Search</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters label {
+            margin-right: 10px;
+        }
+        .results {
+            list-style-type: none;
+            padding: 0;
+        }
+        .result-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .question-type {
+            font-size: 14px;
+            color: #555;
+        }
+        .question-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        #pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination-button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination-button.active {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search" class="search-box" placeholder="Search for questions...">
+        <div class="filters">
+            <label>
+                <input type="checkbox" id="anagramFilter"> Anagrams
+            </label>
+            <label>
+                <input type="checkbox" id="mcqFilter"> MCQs
+            </label>
+        </div>
+        <ul id="results" class="results"></ul>
+        <div id="pagination"></div>
+    </div>
+</body>
+</html>
